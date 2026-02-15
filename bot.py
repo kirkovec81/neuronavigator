@@ -13,7 +13,12 @@ from openai import OpenAI
 
 load_dotenv()
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+import os
+from aiogram import Bot
+
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+
+bot = Bot(token=TELEGRAM_TOKEN)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 import os
 
