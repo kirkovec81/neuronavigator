@@ -15,7 +15,9 @@ load_dotenv()
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+import os
+
+ADMIN_ID = int(os.environ.get("ADMIN_ID", 0))
 
 bot = Bot(token=TELEGRAM_TOKEN)
 dp = Dispatcher()
